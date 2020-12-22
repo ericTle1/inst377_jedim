@@ -49,3 +49,6 @@ In this section, users are able to filter their search results by clicking the b
 
 ###### Payment
 In this section, users are able to filter their search results by clicking the box until a checkmark appears. This section also allows users to filter which markets are accepting certain methods of payments such as WIC, SNAP, cash, etc. 
+
+###### Help
+In this section, users should define all of the help on Markets, Goods, and Payment sections.
