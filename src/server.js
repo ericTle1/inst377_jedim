@@ -1,8 +1,6 @@
 const express = require('express')
 const app = express()
-let homeRoute = require("./src/js/home") //TODO
-let goodRoute = require("./src/js/goods")
-let marketRoute = require("./src/js/markets")
+let homeRoute = require("./routes/market") //TODO
 let path = require('path')
 let bodyParser = require('body-parser')
 
@@ -13,8 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
  
 app.use(homeRoute)
-app.use(goodRoute)
-app.use(marketRoute)
+
 
 app.use(express.static('public'))
 const PORT = process.env.PORT || 4000
