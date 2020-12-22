@@ -3,6 +3,7 @@ const app = express()
 let homeRoute = require("./routes/market") //TODO
 let path = require('path')
 let bodyParser = require('body-parser')
+let db = require("./database.js")
 
 
 //The body-parser middleware module, added to the Express.js app, will try to parse the body content 
