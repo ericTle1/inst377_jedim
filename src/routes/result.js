@@ -19,7 +19,7 @@ resultsRouter.get('/allResults', (req, res) => {
 })
 //GET a result with goodsType
 resultsRouter.get('/result', (req, res) => {
-    if (!req.query.crimeType) {
+    if (!req.query.goodsType) {
       return res.status(400).send('Missing URL parameter goodsType')
     }
     let sql = "select results.id, goodsType, searchNum" +
@@ -71,7 +71,7 @@ resultsRouter.put('/result', (req, res) => {
     });
 })
 
-// POST add a new result with crimeType
+// POST add a new result with goodsType
 resultsRouter.post('/result', async (req, res) => {
   if (!req.body) {
     return resizeBy.status(400).send('Request body is missing')
@@ -80,8 +80,8 @@ resultsRouter.post('/result', async (req, res) => {
   let newType = {
     goodsType: req.body.goodsType
   }
-  // Check if the crime type is already exist
-  let checkIfExistSql = "select * from results where crimeType = ?"
+  // Check if the goods type is already exist
+  let checkIfExistSql = "select * from results where goodsType = ?"
   console.log("req.body.goodsType: " + req.body.goodsType)
   let params = [req.body.goodsType]
   let nameExists = false;
@@ -109,8 +109,8 @@ resultsRouter.post('/result', async (req, res) => {
   if (nameExists)
     return;
 
-  var insertsql = 'INSERT INTO results (crimeType, searchNum) VALUES (?,?)'
-  let input = [req.body.crimeType, 1]
+  var insertsql = 'INSERT INTO results (goodsType, searchNum) VALUES (?,?)'
+  let input = [req.body.goodsType, 1]
   db.run(insertsql, input, function (err, result) {
     if (err) {
       res.status(400).json({ "error": err.message })
