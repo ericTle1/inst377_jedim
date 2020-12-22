@@ -6,7 +6,7 @@ This project is design to provide members of the public by using Prince George A
 locations, and map direction.
 
 # Target Browsers:
-Our target browsers are desktop-based web browsers. Users on iOS/Android may struggle with pinch-to-zoom feature with Google Map. Fully functional using Chrome, Firefox, Safari, and Edge. Opera/IE may encounter some issues.
+Our target browsers are desktop-based web browsers. Fully functional using Chrome, Firefox, Safari, and Edge. Opera/IE may encounter some issues.
 
 # [User Manual](https://github.com/ericTle1/inst377_jedim/blob/main/docs/user.md)
 
@@ -22,23 +22,30 @@ Once you have installed Node.js, npm, and Git, open up gitbash console and navig
 ```
 cd {project repository path}
 ```
-
-Then, you would also need to install dependencies. In the file of package.json, you would find two sections: "dependencies" and "devDependencies." The "dependencies" section outlines the dependencies that are required for the application to function and the "devDependencies" section outlines the dependencies that are required for development of the project. Install dependencies from both section if you wish to modify or work on this project, otherwise, only install dependencies from the “dependencies.” Run the following command to install dependencies.
+## Dependencies
+Install all node dependencies inside the application directory
 ```
-npm install –save {dependency}
+npm install
 ```
-
-You can also run this following command to install all dependencies.
+## Deployment
+Start the application server
 ```
-npm i
-````
+npm run start -watch
+```
+Type in your internet browser
+```
+localhost: 4000
+```
 
 ### Project Structure
 >### /docs 
 Contains user manual and final report.
 
->### /src 
+>### /public 
 Front-end folder that contains images, css, and js files.
+
+>### /src
+Back-end folder that contains the routes folder, server, database, SQL Lite
 
 >### README.md
 Introduces and explains our project.
