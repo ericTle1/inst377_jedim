@@ -11,14 +11,16 @@
     "start-watch": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ericTle1/inst377_jedim.git"
-  },
+  "keywords": [],
   "author": "JEDIM",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ericTle1/inst377_jedim/issues"
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   },
-  "homepage": "https://github.com/ericTle1/inst377_jedim#readme"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  }
 }
